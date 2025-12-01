@@ -131,6 +131,65 @@ class PrimeCheck {
 }
 ```
 
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+
+        SumCalculator sum = new SumCalculator();
+        sum.calculateSum();
+
+        PrimeCheck prime = new PrimeCheck();
+        prime.checkPrime();
+    }
+}
+
+import java.util.Scanner;
+
+class SumCalculator {
+
+    void calculateSum() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        int sum = num1 + num2;
+        System.out.println("The sum is: " + sum);
+        scanner.close();
+    }
+}
+
+class PrimeCheck {
+
+    void checkPrime() {
+        int num = 29;
+        boolean isPrime = true;
+
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= num / 2; ++i) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
+}
+
+```
+
+
 ---
 
 # 🟢 **Output when you run Main:**
