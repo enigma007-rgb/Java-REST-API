@@ -298,6 +298,8 @@ import java.util.Arrays;
 // ========================================
 // MASTER MAIN CLASS
 // ========================================
+
+// For running this in online IDE, modify MainRunner to Main and then run
 public class MainRunner {
     public static void main(String[] args) {
         System.out.println("Running all programs from ONE main class\n");
