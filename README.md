@@ -147,7 +147,7 @@ public class Main {
     }
 }
 
-import java.util.Scanner;
+
 
 class SumCalculator {
 
