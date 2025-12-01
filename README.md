@@ -1,11 +1,13 @@
 # Java-REST-API
 
+```
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-}   
-
+}
+```
+```
 import java.util.Scanner;
 
 public class SumCalculator {
@@ -19,8 +21,9 @@ public class SumCalculator {
         System.out.println("The sum is: " + sum);
         scanner.close();
     }
-}   
-
+}
+```
+```
 public class PrimeCheck {
     public static void main(String[] args) {
         int num = 29;
@@ -40,7 +43,8 @@ public class PrimeCheck {
         else
             System.out.println(num + " is not a prime number.");
     }
-}   
+}
+```
 
 You want to **run `SumCalculator` and `PrimeCheck` from the `Main` class**, instead of running each class separately.
 Right now, each class has its own `main()` method — but you want **Main → run both → call logic**.
