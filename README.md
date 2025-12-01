@@ -1,6 +1,46 @@
 # Java-REST-API
 
-import java.util.Scanner; public class Main { public static void main(String[] args) { System.out.println("Hello, World!"); } } class SumCalculator { public static void main(String[] args) { Scanner scanner = new Scanner(System.in); System.out.print("Enter the first number: "); int num1 = scanner.nextInt(); System.out.print("Enter the second number: "); int num2 = scanner.nextInt(); int sum = num1 + num2; System.out.println("The sum is: " + sum); scanner.close(); } } class PrimeCheck { public static void main(String[] args) { int num = 29; boolean isPrime = true; if (num <= 1) { isPrime = false; } else { for (int i = 2; i <= num / 2; ++i) { if (num % i == 0) { isPrime = false; break; } } } if (isPrime) System.out.println(num + " is a prime number."); else System.out.println(num + " is not a prime number."); } }
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}   
+
+import java.util.Scanner;
+
+public class SumCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        int sum = num1 + num2;
+        System.out.println("The sum is: " + sum);
+        scanner.close();
+    }
+}   
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 29;
+        boolean isPrime = true;
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= num / 2; ++i) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        if (isPrime)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
+}   
 
 You want to **run `SumCalculator` and `PrimeCheck` from the `Main` class**, instead of running each class separately.
 Right now, each class has its own `main()` method — but you want **Main → run both → call logic**.
