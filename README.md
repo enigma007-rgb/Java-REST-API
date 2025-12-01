@@ -298,7 +298,7 @@ import java.util.Arrays;
 // ========================================
 // MASTER MAIN CLASS
 // ========================================
-public class Main {
+public class MainRunner {
     public static void main(String[] args) {
         System.out.println("Running all programs from ONE main class\n");
 
