@@ -10,6 +10,7 @@ public class Main {
 ```
 import java.util.Scanner;
 
+// To run this program in Online IDE, give both numbers in input in 2 different rows
 public class SumCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
