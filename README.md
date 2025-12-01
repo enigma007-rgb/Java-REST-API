@@ -131,6 +131,7 @@ class PrimeCheck {
 }
 ```
 
+### **Combined classes**
 
 ```java
 import java.util.Scanner;
