@@ -271,7 +271,7 @@ public class LongestWord {
 ```
 
 -----------------------------------
-RUN these classes from main classes
+RUN these classes from MAIN class
 -----------------------------------
 
 
