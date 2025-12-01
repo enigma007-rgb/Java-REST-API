@@ -179,6 +179,101 @@ This works because `main()` is just a static method.
 
 ====================================================
 
+```
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class SecondHighestWithStreams {
+    public static void main(String[] args) {
+        int[] arr = {10, 45, 67, 23, 45, 88, 99};
+        int secondHighest = Arrays.stream(arr)
+                .boxed()
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("No second highest number"));
+        System.out.println("Second Highest Number: " + secondHighest);
+    }
+}
+```
+```
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class CharFrequency {
+    public static void main(String[] args) {
+        String input = "success";
+        Map<Character, Long> frequency = input.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(frequency);
+    }
+}
+```
+```
+public class FirstNonRepeatedChar {
+    public static void main(String[] args) {
+        String str = "swiss";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (str.indexOf(c) == str.lastIndexOf(c)) {
+                System.out.println("First Non-Repeated Character: " + c);
+                break;
+            }
+        }
+    }
+}
+```
+```
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class CommonElements {
+    public static void main(String[] args) {
+        Integer[] arr1 = {1, 2, 3, 4, 5};
+        Integer[] arr2 = {3, 4, 5, 6, 7};
+        Set<Integer> set1 = Arrays.stream(arr1).collect(Collectors.toSet());
+        Set<Integer> common = Arrays.stream(arr2)
+                .filter(set1::contains)
+                .collect(Collectors.toSet());
+        System.out.println("Common Elements: " + common);
+    }
+}
+```
+```
+import java.util.Arrays;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 2, 4, 3, 5};
+        int[] unique = Arrays.stream(arr)
+                .distinct()
+                .toArray();
+        System.out.println(Arrays.toString(unique));
+    }
+}
+```
+```
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class LongestWord {
+    public static void main(String[] args) {
+        String sentence = "Java makes coding elegant and fun";
+        String longest = Arrays.stream(sentence.split(" "))
+                .max(Comparator.comparingInt(String::length))
+                .orElse("");
+        System.out.println("Longest Word: " + longest);
+    }
+}
+```
+
+-----------------------------------
+RUN these classes from main classes
+-----------------------------------
+
 
 Below is the **fully corrected version** of your program where:
 
